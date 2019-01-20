@@ -15,28 +15,36 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.black87,
           ),
           body: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Image.asset('images/background.jpg'),
-              ConstrainedBox(
-                  constraints: const BoxConstraints(minWidth: double.infinity),
-                  child: FlatButton(
-                    child: Text("Albums"),
-                    onPressed: () {},
-                  )),
-              ConstrainedBox(
-                constraints: const BoxConstraints(minHeight: double.infinity),
-                child: FlatButton(
-                  child: Text("Artists"),
-                  onPressed: () {},
-                )
+              Expanded(
+                child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                        minWidth: double.infinity),
+                    child: FlatButton(
+                      child: Text("Albums", style: TextStyle(fontFamily: 'Charm', fontWeight: FontWeight.bold, fontSize:40.0),),
+                      onPressed: () {},
+                    )),
               ),
-              // ConstrainedBox(
-              //   constraints: const BoxConstraints(minHeight: double.infinity),
-              //   child: FlatButton(
-              //     child: Text("Songs"),
-              //     onPressed: (){},
-              //   ),
-              // ),
+              Expanded(
+                child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                        minWidth: double.infinity),
+                    child: FlatButton(
+                      child: Text("Songs", style: TextStyle(fontFamily: 'Charm', fontWeight: FontWeight.bold, fontSize:40.0),),
+                      onPressed: () {},
+                    )),
+              ),
+              Expanded(
+                child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                        minWidth: double.infinity),
+                    child: FlatButton(
+                      child: Text("Artists", style: TextStyle(fontFamily: 'Charm', fontWeight: FontWeight.bold, fontSize:40.0),),
+                      onPressed: () {},
+                    )),
+              )
             ],
           )),
     );
