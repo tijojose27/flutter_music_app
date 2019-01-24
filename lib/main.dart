@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context, 
                         MaterialPageRoute(builder: (context){
-                          return SongsScreen();
+                          return SongsScreen(currMusic: myMusic,);
                         })
                       );
                     },
