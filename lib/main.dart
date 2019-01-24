@@ -7,9 +7,9 @@ import 'songs_screen.dart';
 void main() => runApp(MyApp());
 
 List<Music> myMusic = []
-    ..add(Music("14 and under", "Sing Along", "Kids", 'images/kids'))
-    ..add(Music("Russian ballet", "This ballerina", "Ballerina", 'images/kids'))
-    ..add(Music("Emptional", "Violin Sad", "Great Violin", 'images/violin'));
+    ..add(Music("14 and under", "Sing Along", "Kids", 'images/kids.jpg'))
+    ..add(Music("Russian ballet", "This ballerina", "Ballerina", 'images/ballerina.jpg'))
+    ..add(Music("Emptional", "Violin Sad", "Great Violin", 'images/violin.jpg'));
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -87,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return ArtistScreen();
+                        return ArtistScreen(currMusic: myMusic,);
                       }));
                     },
                   )),

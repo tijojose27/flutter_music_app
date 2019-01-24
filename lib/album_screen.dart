@@ -33,12 +33,26 @@ class AlbumList extends StatelessWidget {
     return ListView.builder(
       itemCount: currMusic.length,
       itemBuilder: (context, position) {
-        return Card(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(currMusic[position].albumName, style: TextStyle(fontSize: 22.0)),
-          ),
-        );
+        return Padding(
+            padding: const EdgeInsets.all(13.0),
+            child: Card(
+                child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: <Widget>[
+                  Image.asset(currMusic[position].imageUrl),
+                  Text(
+                    currMusic[position].songName,
+                    style: TextStyle(fontSize: 25.0),
+                  ),
+                  Text(
+                    currMusic[position].artistName,
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(currMusic[position].albumName)
+                ],
+              ),
+            )));
       },
     );
   }
